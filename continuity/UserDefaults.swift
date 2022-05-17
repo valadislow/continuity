@@ -11,17 +11,16 @@ class UserDefaultsSetting: NSObject, ObservableObject {
         }
     }
     
-    @Published var wordsRuRemove: [String] {
-        didSet {
-            userDef.removeObject(forKey: "wordsRu")
-        }
-    }
-
-    @Published var wordsEnRemove: [String] {
-        didSet {
-            userDef.removeObject(forKey: "wordsEn")
-        }
-    }
+//        didSet {
+//            userDef.removeObject(forKey: "wordsRu")
+//        }
+//    }
+//
+//    @Published var wordsEnRemove: [String] {
+//        didSet {
+//            userDef.removeObject(forKey: "wordsEn")
+//        }
+//    }
     
     @Published var wordsEn: [String] {
         didSet {
@@ -32,7 +31,5 @@ class UserDefaultsSetting: NSObject, ObservableObject {
     override init() {
         self.wordsRu = userDef.object(forKey: "wordsRu") as? [String] ?? [""]
         self.wordsEn = userDef.object(forKey: "wordsEn") as? [String] ?? [""]
-        self.wordsEnRemove = userDef.object(forKey: "wordsEn") as? [String] ?? [""]
-        self.wordsRuRemove = userDef.object(forKey: "wordsRu") as? [String] ?? [""]
     }
 }

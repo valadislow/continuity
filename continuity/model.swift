@@ -73,13 +73,6 @@ class Words : ObservableObject {
        "perharp",
        "disaster"
    ]
-    func removeWordsRu(){
-        userDefaults.wordsRu = keys
-    }
-    
-    func removeWordsEn(){
-        userDefaults.wordsEn = values
-    }
     
     func saveWordsRu() {
         userDefaults.wordsRu = keys

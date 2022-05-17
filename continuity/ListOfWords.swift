@@ -50,19 +50,19 @@ struct ListOfWordsView: View {
 //    }
     
     var body: some View {
-        let keyCount = words.values.count
+        
         VStack {
             VStack {
                 YourCustomModifier(name: "LIST OF WORDS")
             }
             List {
-                ForEach(0..<keyCount) { i in
+                ForEach(0..<(words.values.count - 1)) { number in
                     HStack{
-                        Text(words.values[i])
+                        Text(words.values[number])
                             .foregroundColor(Color.white)
                             .fontWeight(.bold)
                         Spacer()
-                        Text(words.keys[i])
+                        Text(words.keys[number])
                             .foregroundColor(Color.white)
                             .fontWeight(.bold)
                     }
@@ -97,10 +97,8 @@ struct ListOfWordsView: View {
         words.values.remove(atOffsets: offsets)
         words.keys.remove(atOffsets: offsets)
         
-        words.removeWordsEn()
-        words.removeWordsRu()
-        
-//        UserDefaults.standard.synchronize()
+        words.saveWordsRu()
+        words.saveWordsEn()
     }
 }
 
