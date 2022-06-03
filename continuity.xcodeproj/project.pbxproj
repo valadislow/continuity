@@ -22,7 +22,7 @@
 		630C1812282C25E00012734A /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		6367FFAD27EB973D00E62D59 /* AddWordSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWordSheet.swift; sourceTree = "<group>"; };
 		637FDD0C28045094004942F7 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
-		6388B5F427D8BB6300F3529D /* continuity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = continuity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6388B5F427D8BB6300F3529D /* ToLearn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToLearn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6388B5F727D8BB6300F3529D /* continuityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = continuityApp.swift; sourceTree = "<group>"; };
 		6388B5F927D8BB6300F3529D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6388B5FB27D8BB6600F3529D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 		6388B5F527D8BB6300F3529D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6388B5F427D8BB6300F3529D /* continuity.app */,
+				6388B5F427D8BB6300F3529D /* ToLearn.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,7 +96,7 @@
 			);
 			name = continuity;
 			productName = continuity;
-			productReference = 6388B5F427D8BB6300F3529D /* continuity.app */;
+			productReference = 6388B5F427D8BB6300F3529D /* ToLearn.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -298,8 +298,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.les.continuity;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.les.ToLearn;
+				PRODUCT_NAME = ToLearn;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -327,8 +327,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.les.continuity;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.les.ToLearn;
+				PRODUCT_NAME = ToLearn;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

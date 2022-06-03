@@ -51,12 +51,15 @@ struct ListOfWordsView: View {
     
     var body: some View {
         
+//        var correctCount = words.values.count
+        
         VStack {
             VStack {
                 YourCustomModifier(name: "LIST OF WORDS")
             }
             List {
                 ForEach(0..<(words.values.count - 1)) { number in
+//                    ForEach(0..<(words.values.count) - 1) { number in
                     HStack{
                         Text(words.values[number])
                             .foregroundColor(Color.white)
@@ -91,7 +94,7 @@ struct ListOfWordsView: View {
 //            word in
 //        }
 //    }
-    
+   
     
     func delete(at offsets: IndexSet) {
         words.values.remove(atOffsets: offsets)
