@@ -26,8 +26,7 @@ The paramount feature of this app is that the user by himself chose the words wh
 ## Tech Stack
 
 **Client:** 
-SOLID, SwiftUI, 
-MVC, MVVM, Git, UserDefaults, CoreData, Combine, OOP principles
+SOLID, SwiftUI, Git, UserDefaults, CoreData, Combine, OOP principles
 
 
 ## Authors
