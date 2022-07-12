@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6388B5F327D8BB6300F3529D"
-               BuildableName = "continuity.app"
+               BuildableName = "ToLearn.app"
                BlueprintName = "continuity"
                ReferencedContainer = "container:continuity.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6388B5F327D8BB6300F3529D"
-            BuildableName = "continuity.app"
+            BuildableName = "ToLearn.app"
             BlueprintName = "continuity"
             ReferencedContainer = "container:continuity.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6388B5F327D8BB6300F3529D"
-            BuildableName = "continuity.app"
+            BuildableName = "ToLearn.app"
             BlueprintName = "continuity"
             ReferencedContainer = "container:continuity.xcodeproj">
          </BuildableReference>
