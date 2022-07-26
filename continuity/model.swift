@@ -45,33 +45,33 @@ class Words : ObservableObject {
     
     
     @Published var keys = [
-        "в сравнении",
-        "горе",
-        "время от времени",
-        "в стороне",
-        "тихий",
-        "исчез",
-        "придирчивый",
-        "пятнышки",
-        "ожидает",
-        "насекомые",
-        "возможно",
-        "стихийное бедствие "
+        "tree",
+        "opportunity",
+        "price",
+        "cause",
+        "face",
+        "disease",
+        "result",
+        "painting",
+        "finger",
+        "improve",
+        "advice",
+        "draw"
     ]
     
    @Published var values = [
-       "compared",
-       "woe",
-       "accasionaly",
-       "aside",
-       "silent",
-       "vanished",
-       "cautious",
-       "specks",
-       "is pending",
-       "insects",
-       "perharp",
-       "disaster"
+       "albero",
+       "occasione",
+       "prezzo",
+       "causa",
+       "volto",
+       "malattia",
+       "conseguenza",
+       "quadro",
+       "dito",
+       "Migliorare",
+       "consiglio",
+       "disegnare"
    ]
     
     func saveWordsRu() {
