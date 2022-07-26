@@ -42,7 +42,7 @@ struct ContentView: View {
                         Button(action: {
                             ListOfWords = true
                         }, label: {
-                            Words.YourCustomModifier(name: "Your words")
+                            Views.YourCustomModifier(name: "Your words")
                                 .sheet(isPresented: $ListOfWords){
                                     ListOfWordsView()
                                 }
@@ -50,7 +50,7 @@ struct ContentView: View {
                         Button(action: {
                             words.showingSheet = true
                         }, label: {
-                            Words.YourCustomModifier(name: "Add word")
+                            Views.YourCustomModifier(name: "Add word")
                                 .sheet(isPresented: $words.showingSheet){
                                     AddWordSheet()
                                 }
