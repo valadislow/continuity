@@ -58,6 +58,7 @@ struct ContentView: View {
                                 }
                         })
                     }
+                    Spacer()
                     Views.RoundsView(name: "Round: \(rounds)")
                     
                     Text("Choose the correct answer:")
@@ -81,16 +82,18 @@ struct ContentView: View {
                             .fontWeight(.semibold)
                             .frame(width: 200, height: 100)
                             .background()
+                            .cornerRadius(20)
                             .frame(width: 200, height: 100)
-                            .offset(x: -6, y: -5)
+                            .offset(x: -6, y: -6)
                             .background(Color(UIColor(red: 0.04, green: 0.52, blue: 0.89, alpha: 1.00)))
+                            .cornerRadius(20)
                             .font(.title3)
                     }
                 }
-                Text("SCORE: \(score)")
-                    .foregroundColor(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
-                    .fontWeight(.black)
-                    .font(.largeTitle)
+//                Text("SCORE: \(score)")
+//                    .foregroundColor(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
+//                    .fontWeight(.black)
+//                    .font(.largeTitle)
                 
                 //                Text("RANDOM: \(randoms)")
                 //                    .foregroundColor(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
