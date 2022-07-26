@@ -22,6 +22,7 @@ class Views {
                 .scaleEffect(2)
                 .padding(40)
                 .rotation3DEffect(.degrees(35), axis: (x:4 , y:0, z:0))
+            
         }
     }
 }
