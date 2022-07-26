@@ -18,44 +18,17 @@
 import SwiftUI
 
 
-struct YourCustomModifier: View {
-        
-    var name: String
-    
-    var body: some View {
-        Text(name)
-            .font(.system(size: 20, weight: .heavy, design: .monospaced))
-            .fontWeight(.heavy)
-            .foregroundColor(.white)
-            .scaleEffect(2)
-            .padding(40)
-            .rotation3DEffect(.degrees(35), axis: (x:4 , y:0, z:0))
-    }
-}
-
-
 struct ListOfWordsView: View {
     
     @ObservedObject var words = Words.shared
     
-//    var wordss = wordsInTheList(value: words.values, key: words.keys)
-    
-//    var collections = [
-//        Words(value: words.values, key: words.keys)
-//    ]
-    
-//    func seque() -> [String] [String] {
-//        let sequee = zip(words.values, words.keys)
-//        return sequee
-//    }
     
     var body: some View {
         
-//        var correctCount = words.values.count
         
         VStack {
             VStack {
-                YourCustomModifier(name: "LIST OF WORDS")
+                Views.ListOfWordsMView(name: "LIST OF WORDS")
             }
             List {
                 ForEach(0..<(words.values.count - 1)) { number in
@@ -77,24 +50,7 @@ struct ListOfWordsView: View {
         }
         .background(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
     }
-    
-//    func wordes() {
-//        ForEach(words.keys, id:\.self) { words in
-//            Text(words)
-//        }
-//    }
-//    func wordees() {
-//        ForEach(words.values, id:\.self) { words in
-//            Text(words)
-//        }
-//    }
-//
-//    func forEch() -> Int {
-//        ForEach(0...words.keys.count - 1) {
-//            word in
-//        }
-//    }
-   
+       
     
     func delete(at offsets: IndexSet) {
         words.values.remove(atOffsets: offsets)
