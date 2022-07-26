@@ -30,6 +30,8 @@ struct ContentView: View {
     
     var body: some View {
         
+        
+        
         ZStack{
             Rectangle()
                 .ignoresSafeArea()
@@ -56,13 +58,7 @@ struct ContentView: View {
                                 }
                         })
                     }
-                    Text("Round: \(rounds)")
-                        .foregroundColor(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
-                        .fontWeight(.black)
-                        .font(.largeTitle)
-                        .rotation3DEffect(.degrees(35), axis: (x:3, y:0, z:0))
-                        .scaleEffect(2)
-                        .padding()
+                    Views.RoundsView(name: "Round: \(rounds)")
                     
                     Text("Choose the correct answer:")
                         .foregroundColor(.white)
@@ -95,8 +91,6 @@ struct ContentView: View {
                     .foregroundColor(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
                     .fontWeight(.black)
                     .font(.largeTitle)
-                
-                
                 
                 //                Text("RANDOM: \(randoms)")
                 //                    .foregroundColor(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))

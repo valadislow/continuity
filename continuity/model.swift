@@ -11,18 +11,6 @@ import Combine
 
 class Words : ObservableObject {
     
-    struct YourCustomModifier: View {
-            
-        var name: String
-        
-        var body: some View {
-            Text(name)
-                .foregroundColor(.white)
-                .fontWeight(.bold)
-                .frame(width: 120, height: 100)
-                .background(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
-        }
-    }
     
     static let shared = Words()
     
@@ -32,46 +20,35 @@ class Words : ObservableObject {
     
     @ObservedObject var userDefaults = UserDefaultsSetting()
     
-//    struct Wordss: Identifiable {
-//        var id = UUID()
-//        let values: [String]
-//        let keys: [String]
-//    }
-//
-//    func randomni() -> Int {
-//        let correct = Int.random(in: 0...values.count - 1)
-//        return correct
-//    }
-    
     
     @Published var keys = [
-        "в сравнении",
-        "горе",
-        "время от времени",
-        "в стороне",
-        "тихий",
-        "исчез",
-        "придирчивый",
-        "пятнышки",
-        "ожидает",
-        "насекомые",
-        "возможно",
-        "стихийное бедствие "
+        "view",
+        "punishment",
+        "reason",
+        "tree",
+        "opportunity",
+        "price",
+        "cause",
+        "face",
+        "disease",
+        "finger",
+        "as soon as",
+        "to improve"
     ]
     
    @Published var values = [
-       "compared",
-       "woe",
-       "accasionaly",
-       "aside",
-       "silent",
-       "vanished",
-       "cautious",
-       "specks",
-       "is pending",
-       "insects",
-       "perharp",
-       "disaster"
+       "vista",
+       "pena",
+       "motivo",
+       "albero",
+       "occasione",
+       "prezzo",
+       "causa",
+       "volto",
+       "malattia",
+       "dito",
+       "appena",
+       "migliorare"
    ]
     
     func saveWordsRu() {
@@ -83,3 +60,14 @@ class Words : ObservableObject {
     }
 }
 
+
+//    struct Wordss: Identifiable {
+//        var id = UUID()
+//        let values: [String]
+//        let keys: [String]
+//    }
+//
+//    func randomni() -> Int {
+//        let correct = Int.random(in: 0...values.count - 1)
+//        return correct
+//    }
