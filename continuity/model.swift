@@ -22,7 +22,6 @@ class Words : ObservableObject {
     
     
     @Published var keys = [
-        "view",
         "punishment",
         "reason",
         "tree",
@@ -61,7 +60,6 @@ class Words : ObservableObject {
     ]
     
    @Published var values = [
-       "vista",
        "pena",
        "motivo",
        "albero",
