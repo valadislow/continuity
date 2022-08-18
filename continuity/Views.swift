@@ -19,9 +19,9 @@ class Views {
             Text(name)
                 .foregroundColor(.white)
                 .fontWeight(.bold)
-                .frame(width: 150, height: 100)
+                .frame(width: 140, height: 100)
                 .background(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
-//                .cornerRadius(5)
+                .cornerRadius(5)
         }
     }
     
@@ -55,6 +55,7 @@ class Views {
         }
     }
         
+    
 }
 
 //struct RoundsView: View {

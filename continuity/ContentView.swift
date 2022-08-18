@@ -44,7 +44,7 @@ struct ContentView: View {
                         Button(action: {
                             ListOfWords = true
                         }, label: {
-                            Views.YourCustomModifier(name: "Your words")
+                            Views.YourCustomModifier(name: "Words")
                                 .sheet(isPresented: $ListOfWords){
                                     ListOfWordsView()
                                 }
@@ -90,16 +90,7 @@ struct ContentView: View {
                             .font(.title3)
                     }
                 }
-//                Text("SCORE: \(score)")
-//                    .foregroundColor(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
-//                    .fontWeight(.black)
-//                    .font(.largeTitle)
-                
-                //                Text("RANDOM: \(randoms)")
-                //                    .foregroundColor(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
-                //                    .fontWeight(.black)
-                //                    .font(.largeTitle)
-                
+
             }
             .alert(isPresented: $showingAlert) {
                 Alert(title: Text("💩 Answer was wrong 💩"),
