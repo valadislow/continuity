@@ -54,8 +54,24 @@ class Views {
             .padding()
         }
     }
-        
     
+//    struct ButtonView: View {
+//        
+//        var name: String
+//        
+//        var body: some View {
+//            .fontWeight(.semibold)
+//            .frame(width: 200, height: 100)
+//            .background()
+//            .cornerRadius(20)
+//            .frame(width: 200, height: 100)
+//            .offset(x: -6, y: -6)
+//            .background(Color(UIColor(red: 0.04, green: 0.52, blue: 0.89, alpha: 1.00)))
+//            .cornerRadius(20)
+//            .font(.title3)
+//        }
+//    }
+        
 }
 
 //struct RoundsView: View {
