@@ -11,17 +11,6 @@ class UserDefaultsSetting: NSObject, ObservableObject {
         }
     }
     
-//        didSet {
-//            userDef.removeObject(forKey: "wordsRu")
-//        }
-//    }
-//
-//    @Published var wordsEnRemove: [String] {
-//        didSet {
-//            userDef.removeObject(forKey: "wordsEn")
-//        }
-//    }
-    
     @Published var wordsEn: [String] {
         didSet {
             userDef.set(wordsEn, forKey: "wordsEn")

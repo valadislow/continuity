@@ -16,11 +16,17 @@
 
 
 import SwiftUI
-
+ 
+//struct Word: Identifiable{
+//    var id: UUID
+//    var value: String
+//    var key: String
+//}
 
 struct ListOfWordsView: View {
     
     @ObservedObject var words = Words.shared
+    
     
     
     var body: some View {
@@ -30,8 +36,11 @@ struct ListOfWordsView: View {
             VStack {
                 Views.ListOfWordsMView(name: "LIST OF WORDS")
             }
+
+    
+            
             List {
-                ForEach(0..<(words.values.count - 1)) { number in
+                ForEach(0..<(words.values.count)) { number in
                     HStack{
                         Text(words.values[number])
                             .foregroundColor(Color.white)
