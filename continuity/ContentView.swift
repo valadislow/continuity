@@ -27,6 +27,7 @@ struct ContentView: View {
     @State private var rounds = 0
     @State private var score = 0
     
+    @State private var array = []
     
     var body: some View {
         
@@ -108,11 +109,31 @@ struct ContentView: View {
         return correct
     }
     
+    func elementControl() -> String {
+        var anotherElement = words.values[randomni()]
+        var newElement = words.values[random()]
+        
+        if array.contains(where: newElement) {
+            array.append(anotherElement)
+        }else {
+            array.append(newElement)
+        }
+        
+    }
+    
+//    func exam(_: Bool) -> Bool {
+//        var newElement = words.values[random()]
+//        if var hasElement = array.contains(newElement) = true{
+//            array.append(<#T##newElement: Any##Any#>)
+//        }
+//    }
+//
+    
     func getAnswer(count: Int) -> String {
         if count == self.randoms {
             return words.values[rounds]
         } else {
-            return words.values[randomni()]
+            return elementControl()
         }
     }
     
