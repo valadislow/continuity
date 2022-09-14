@@ -27,7 +27,7 @@ struct ContentView: View {
     @State private var rounds = 0
     @State private var score = 0
     
-    @State private var array = []
+    @State private var arrayd = []
     
     var body: some View {
         
@@ -94,7 +94,7 @@ struct ContentView: View {
 
             }
             .alert(isPresented: $showingAlert) {
-                Alert(title: Text("💩 Answer was wrong 💩"),
+                Alert(title: Text("💩 Answer was wrong 💩 the right one was \(words.values[rounds - 1])"),            
                       dismissButton: .default(Text("Countinue")))
             }
         }
@@ -109,31 +109,39 @@ struct ContentView: View {
         return correct
     }
     
-    func elementControl() -> String {
-        var anotherElement = words.values[randomni()]
-        var newElement = words.values[random()]
-        
-        if array.contains(where: newElement) {
-            array.append(anotherElement)
-        }else {
-            array.append(newElement)
-        }
-        
-    }
     
-//    func exam(_: Bool) -> Bool {
+//    func elementControl() -> String {
+//        var anotherElement = words.values[randomni()]
 //        var newElement = words.values[random()]
-//        if var hasElement = array.contains(newElement) = true{
-//            array.append(<#T##newElement: Any##Any#>)
-//        }
-//    }
 //
+//        if (arrayd.contains(where: newElement)) -> Bool {
+//
+//            arrayd.append(anotherElement)
+//        }else {
+//            arrayd.append(newElement)
+//        }
+//
+//    }
+    
+//    func elementControl() -> String {
+//            var anotherElement = words.values[randomni()]
+//            var newElement = words.values[random()]
+//        var hasElement = arrayd.contains(where: newElement)
+//
+//        if hasElement return true {
+//                arrayd.append(anotherElement)
+//            } else {
+//                arrayd.append(newElement)
+//            }
+//
+//        }
     
     func getAnswer(count: Int) -> String {
         if count == self.randoms {
             return words.values[rounds]
         } else {
-            return elementControl()
+            return words.values[randomni()]
+//            return elementControl()
         }
     }
     
@@ -157,6 +165,7 @@ struct ContentView: View {
     func examination(_ number: Int) {
         if number == self.randoms {
             self.score += 100
+            self.background(Color.green)
         } else {
             self.score -= 100
             self.showingAlert = true
