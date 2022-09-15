@@ -165,7 +165,6 @@ struct ContentView: View {
     func examination(_ number: Int) {
         if number == self.randoms {
             self.score += 100
-            self.background(Color.green)
         } else {
             self.score -= 100
             self.showingAlert = true
