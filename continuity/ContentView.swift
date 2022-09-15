@@ -8,9 +8,6 @@
 import SwiftUI
 import Combine
 
-//class Sheet : ObservableObject{
-//    @Published var showingSheet = false
-//}
 
 
 struct ContentView: View {
@@ -21,13 +18,13 @@ struct ContentView: View {
     @State private var showingAlert = false
     
     @State private var randoms = Int.random(in: 0...3)
-    //    @State var randomni = Int.random(in: 0...words.values.count)
     
     @State private var round = 0
     @State private var rounds = 0
     @State private var score = 0
     
     @State private var arrayd = []
+    
     
     var body: some View {
         
@@ -114,7 +111,7 @@ struct ContentView: View {
 //        var anotherElement = words.values[randomni()]
 //        var newElement = words.values[random()]
 //
-//        if (arrayd.contains(where: newElement)) -> Bool {
+//        if (arrayd.contains(where: newElement)) {
 //
 //            arrayd.append(anotherElement)
 //        }else {
@@ -124,17 +121,22 @@ struct ContentView: View {
 //    }
     
 //    func elementControl() -> String {
-//            var anotherElement = words.values[randomni()]
-//            var newElement = words.values[random()]
-//        var hasElement = arrayd.contains(where: newElement)
+//        let anotherElement = words.values[randomni()]
+//        let newElement = words.values[random()]
+//        var hasElement = arrayd.contains { newElement in
+//            
+//            if hasElement == true {
+//                    arrayd.append(anotherElement)
+//                } else {
+//                    return false
+//                    arrayd.append(newElement)
+//                }
 //
-//        if hasElement return true {
-//                arrayd.append(anotherElement)
-//            } else {
-//                arrayd.append(newElement)
 //            }
-//
 //        }
+//            
+
+        
     
     func getAnswer(count: Int) -> String {
         if count == self.randoms {
