@@ -20,14 +20,14 @@ struct ContentView: View {
     @State private var ListOfWords = false
     @State private var showingAlert = false
     
-    @State private var correctAnswer = Int.random(in: 0...3)
+    @State private var randoms = Int.random(in: 0...3)
     //    @State var randomni = Int.random(in: 0...words.values.count)
     
     @State private var round = 0
     @State private var rounds = 0
     @State private var score = 0
     
-    
+    @State private var arrayd = []
     
     var body: some View {
         
@@ -76,7 +76,7 @@ struct ContentView: View {
                     Button(action: {
                         self.examination(number)
                         self.didSetRounds()
-                        self.correctAnswer = random()
+                        self.randoms = random()
                         
                     }){
                         Text(self.getAnswer(count: number))
@@ -94,7 +94,7 @@ struct ContentView: View {
 
             }
             .alert(isPresented: $showingAlert) {
-                Alert(title: Text("💩 Answer was wrong, the right one was \(getAnswer(count: self.correctAnswer)) 💩"),
+                Alert(title: Text("💩 Answer was wrong 💩 the right one was \(words.values[rounds - 1])"),            
                       dismissButton: .default(Text("Countinue")))
             }
         }
@@ -109,11 +109,39 @@ struct ContentView: View {
         return correct
     }
     
+    
+//    func elementControl() -> String {
+//        var anotherElement = words.values[randomni()]
+//        var newElement = words.values[random()]
+//
+//        if (arrayd.contains(where: newElement)) -> Bool {
+//
+//            arrayd.append(anotherElement)
+//        }else {
+//            arrayd.append(newElement)
+//        }
+//
+//    }
+    
+//    func elementControl() -> String {
+//            var anotherElement = words.values[randomni()]
+//            var newElement = words.values[random()]
+//        var hasElement = arrayd.contains(where: newElement)
+//
+//        if hasElement return true {
+//                arrayd.append(anotherElement)
+//            } else {
+//                arrayd.append(newElement)
+//            }
+//
+//        }
+    
     func getAnswer(count: Int) -> String {
-        if count == self.correctAnswer {
+        if count == self.randoms {
             return words.values[rounds]
         } else {
             return words.values[randomni()]
+//            return elementControl()
         }
     }
     
@@ -135,22 +163,59 @@ struct ContentView: View {
     }
     
     func examination(_ number: Int) {
-        if number == self.correctAnswer {
+        if number == self.randoms {
             self.score += 100
-//            self.background[number] = Color.green
         } else {
             self.score -= 100
             self.showingAlert = true
         }
     }
-}
     
-  
+    //    func get(count: String) -> String{
+    //        if count ==
+    //    }
+    
+    //    func rrandom() -> Int {
+    //        if Array(questionsAnswer.values)[rounds] == uwords[random()]{
+    //            return uwords[random()]
+    //        } else {
+    //            return uwords[random()]
+    //        }
+    //
+    //    }
+    //
+    //    func notAlike(count: Int, uwords[random()]: Int) -> Int{
+    //        if count == uwords[random()]{
+    //            return uwords[random()]
+    //        }else{
+    //            return uwords[random()]
+    //        }
+    //    }
+    
+    //    func notAlike(getAnswer(count: number)) -> String {
+    //        if Array(self.questionsAnswer.value)[random()] == Array(self.questionsAnswer.values)[rounds]{
+    //        return uwords[random()]
+    //    } else {
+    //        return Array(self.questionsAnswer.value)[random()]
+    //    }
+    //    }
+    //
+    
+    //        func wordTapped(_ number: Int)  {
+    //             if number == random() {
+    //        score += 1
+    //        } else {
+    //        score -= 1
+    //        }
+    //    }
+    
+    //
+    
+}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
-
 }
-
