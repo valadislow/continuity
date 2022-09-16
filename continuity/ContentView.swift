@@ -23,7 +23,7 @@ struct ContentView: View {
     @State private var rounds = 0
     @State private var score = 0
     
-    @State private var arrayd = []
+    @State var arrayd = []
     
     
     var body: some View {
@@ -36,7 +36,7 @@ struct ContentView: View {
                 .foregroundColor(Color(UIColor(red: 0.45, green: 0.73, blue: 1.00, alpha: 1.00)))
             
             VStack {
-                
+    
                 VStack(){
                     HStack(spacing: 25){
                         Button(action: {
@@ -76,7 +76,8 @@ struct ContentView: View {
                         self.randoms = random()
                         
                     }){
-                        Text(self.getAnswer(count: number))
+                        let text = self.getAnswer(count: number)
+                        Text(text)
                             .fontWeight(.semibold)
                             .frame(width: 200, height: 100)
                             .background()
@@ -107,43 +108,20 @@ struct ContentView: View {
     }
     
     
-//    func elementControl() -> String {
-//        var anotherElement = words.values[randomni()]
-//        var newElement = words.values[random()]
-//
-//        if (arrayd.contains(where: newElement)) {
-//
-//            arrayd.append(anotherElement)
-//        }else {
-//            arrayd.append(newElement)
-//        }
-//
-//    }
-    
-//    func elementControl() -> String {
-//        let anotherElement = words.values[randomni()]
-//        let newElement = words.values[random()]
-//        var hasElement = arrayd.contains { newElement in
-//            
-//            if hasElement == true {
-//                    arrayd.append(anotherElement)
-//                } else {
-//                    return false
-//                    arrayd.append(newElement)
-//                }
-//
-//            }
-//        }
-//            
-
+    func elementControl() -> String {
         
+        let newElement = words.values[randomni()]
+        return newElement
+    }
+    
     
     func getAnswer(count: Int) -> String {
         if count == self.randoms {
-            return words.values[rounds]
+            let word = words.values[rounds]
+            return word
         } else {
-            return words.values[randomni()]
-//            return elementControl()
+            let element = elementControl()
+            return element
         }
     }
     
@@ -219,5 +197,11 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+extension Array {
+    func contains<T>(obj: T) -> Bool where T: Equatable {
+        return !self.filter({$0 as? T == obj}).isEmpty
     }
 }
