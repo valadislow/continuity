@@ -34,10 +34,10 @@ struct AddWordSheet: View {
                 VStack{
                     Form{
                         
-                        TextField("Enter word on italian", text: $addValue)
+                        TextField("Enter word on english", text: $addValue)
                             .padding()
                             .background()
-                        TextField("Enter word on english", text: $addKey)
+                        TextField("Enter word on russian", text: $addKey)
                             .padding()
                             .background()
                     }
