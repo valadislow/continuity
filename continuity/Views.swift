@@ -51,7 +51,7 @@ class Views {
             .font(.largeTitle)
             .rotation3DEffect(.degrees(35), axis: (x:3, y:0, z:0))
             .scaleEffect(2)
-            .padding()
+            .padding(25)
         }
     }
     
