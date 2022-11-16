@@ -17,6 +17,10 @@ struct AddWordSheet: View {
     @State var addKey = ""
     
     
+    init(){
+        UITableView.appearance().backgroundColor = .clear
+    }
+    
     var body: some View {
         ZStack{
             Rectangle()
@@ -32,8 +36,7 @@ struct AddWordSheet: View {
                 Spacer()
                 
                 VStack{
-                    Form{
-                        
+                    Form {
                         TextField("Enter word on english", text: $addValue)
                             .padding()
                             .background()
@@ -43,15 +46,16 @@ struct AddWordSheet: View {
                     }
                 }
                 
+                .onAppear(perform: {
+                    UITableView.appearance().backgroundColor = UIColor.clear
+                    UITableViewCell.appearance().backgroundColor = UIColor.clear
+                })
                 .background(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
                 .padding(1)
                 .listRowBackground(Color.clear)
                 .accentColor(.blue)
                 .foregroundColor(Color.blue)
-                .onAppear(perform: {
-                    UITableView.appearance().backgroundColor = UIColor.clear
-                    UITableViewCell.appearance().backgroundColor = UIColor.clear
-                })
+                
                 
                 Button(action: {
                     words.keys.append(addKey)
@@ -96,27 +100,6 @@ struct AddWordSheet: View {
         
     }
     
-    //    func AddValue() -> [String]{
-    //        words.values.append(addValue)
-    //    }
-    
-    //    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-    //
-    //        userDefaults.setValue(addValue, forKey: "addValue")
-    //        return true
-    //    }
-    
-    //    func AddTo() {
-    //        values.append(addValue)
-    //        keys.append(addKey)
-    //    }
-    //    func Value(){
-    //    let userDefaults = UserDefaults()
-    //
-    //        if let value = userDefaults.value(forKey: "tap") as? String{
-    //        }
-    //    }
-    //}
 }
 
 struct showingSheet_Previews: PreviewProvider {

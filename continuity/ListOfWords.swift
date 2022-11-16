@@ -28,6 +28,11 @@ struct ListOfWordsView: View {
     @ObservedObject var words = Words.shared
     
     
+//    init(
+//        _ data: Data,
+//        id: KeyPath<Data.Element, ID>,
+//        content: @escaping (Data.Element) -> Content
+//    )
     
     var body: some View {
         
@@ -37,9 +42,11 @@ struct ListOfWordsView: View {
                 Views.ListOfWordsMView(name: "LIST OF WORDS")
             }
 
-    
             
             List {
+//                ForEach(0..<words.values.count, id: \.self) { index in
+//                    ForEach(words.values[index]) { word in
+                
                 ForEach(0..<(words.values.count)) { number in
                     HStack{
                         Text(words.values[number])
