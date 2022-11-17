@@ -9,11 +9,6 @@ import SwiftUI
 
 struct AddWordSheet: View {
     
-    init(){
-        UITableView.appearance().backgroundColor = .clear
-    }
-    
-    
     @ObservedObject var words = Words.shared
     
     @State var alertAddedWord = false
@@ -22,45 +17,44 @@ struct AddWordSheet: View {
     @State var addKey = ""
     
     
+    init(){
+        UITableView.appearance().backgroundColor = .clear
+    }
+    
     var body: some View {
         ZStack{
-//            Rectangle()
-//                .edgesIgnoringSafeArea(.bottom)
-//                .foregroundColor(Color(UIColor(red: 0.93, green: 0.94, blue: 0.95, alpha: 1.00)))
-//
+            Rectangle()
+                .edgesIgnoringSafeArea(.bottom)
+                .foregroundColor(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
+            
             VStack{
                 Text("ADD WORD TO LEARN")
                     .font(.system(size: 41, weight: .heavy, design: .monospaced))
+                    .foregroundColor(.white)
                     .padding(30)
                     .rotation3DEffect(.degrees(35), axis: (x:4 , y:0, z:0))
-                    .foregroundColor(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
                 Spacer()
                 
                 VStack{
-                    Form{
+                    Form {
                         TextField("Enter word on english", text: $addValue)
-                            .padding(20)
-                        
+                            .padding()
+                            .background()
                         TextField("Enter word on russian", text: $addKey)
-                            .padding(20)
+                            .padding()
+                            .background()
                     }
-                    .onAppear(perform: {
-                        UITableViewCell.appearance().backgroundColor = UIColor.clear
-                    })
-                    .onDisappear {
-                        UITableView.appearance().backgroundColor = .systemGroupedBackground }
-                    .foregroundColor(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
-                    .background(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
-//                                    .onAppear(perform: {
-//                                         UITableViewCell.appearance().backgroundColor = UIColor.clear
-//                                    })
-//                                    .onDisappear {
-//                                        UITableView.appearance().backgroundColor = .systemGroupedBackground }
-//                                    .listRowBackground(Color.clear)
-//                                    .accentColor(.blue)
-//                                    .foregroundColor(Color.blue)
-                    
                 }
+                
+                .onAppear(perform: {
+                    UITableView.appearance().backgroundColor = UIColor.clear
+                    UITableViewCell.appearance().backgroundColor = UIColor.clear
+                })
+                .background(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
+                .padding(1)
+                .listRowBackground(Color.clear)
+                .accentColor(.blue)
+                .foregroundColor(Color.blue)
                 
                 
                 Button(action: {
@@ -72,7 +66,7 @@ struct AddWordSheet: View {
                     
                     alertAddedWord = true
                     makeEmpty()
-
+                    //                    words.showingSheet = false
                 }, label: {
                     ZStack {
                         Rectangle()
