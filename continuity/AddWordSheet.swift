@@ -15,8 +15,7 @@ struct AddWordSheet: View {
     
     @State var addValue = ""
     @State var addKey = ""
-    
-    
+        
     init(){
         UITableView.appearance().backgroundColor = .clear
     }
@@ -44,29 +43,34 @@ struct AddWordSheet: View {
                             .padding()
                             .background()
                     }
+                    
+                    .onAppear(perform: {
+                        UITableView.appearance().backgroundColor = UIColor.clear
+                        UITableViewCell.appearance().backgroundColor = UIColor.clear
+                    })
+
+                    .background(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
+                    
+                    .listRowBackground(Color(UIColor.systemGroupedBackground))                    .accentColor(.blue)
+                    .background(Color.yellow)
                 }
                 
-                .onAppear(perform: {
-                    UITableView.appearance().backgroundColor = UIColor.clear
-                    UITableViewCell.appearance().backgroundColor = UIColor.clear
-                })
-                .background(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
-                .padding(1)
-                .listRowBackground(Color.clear)
-                .accentColor(.blue)
-                .foregroundColor(Color.blue)
+                
                 
                 
                 Button(action: {
-                    words.keys.append(addKey)
-                    words.values.append(addValue)
+//                    words.keys.append(addKey)
+//                    words.values.append(addValue)
                     
-                    words.saveWordsRu()
-                    words.saveWordsEn()
+                    
+               
+//                    words.saveWords()
+//                    words.saveWordsRu()
+//                    words.saveWordsEn()
                     
                     alertAddedWord = true
                     makeEmpty()
-                    //                    words.showingSheet = false
+//                    words.showingSheet = false
                 }, label: {
                     ZStack {
                         Rectangle()
@@ -94,10 +98,18 @@ struct AddWordSheet: View {
         }
     }
     
+//    func wordCheck() {
+//        if { self.addValue = "" & self.addKey = ""
+//        }
+//    }
+    
+    func addWord(word: Word){
+        guys.append(word)
+    }
+    
     func makeEmpty(){
         self.addValue = ""
         self.addKey = ""
-        
     }
     
 }

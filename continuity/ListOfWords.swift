@@ -28,12 +28,6 @@ struct ListOfWordsView: View {
     @ObservedObject var words = Words.shared
     
     
-//    init(
-//        _ data: Data,
-//        id: KeyPath<Data.Element, ID>,
-//        content: @escaping (Data.Element) -> Content
-//    )
-    
     var body: some View {
         
         
@@ -44,16 +38,14 @@ struct ListOfWordsView: View {
 
             
             List {
-//                ForEach(0..<words.values.count, id: \.self) { index in
-//                    ForEach(words.values[index]) { word in
-                
-                ForEach(0..<(words.values.count)) { number in
+
+                ForEach(words.guys) { word in
                     HStack{
-                        Text(words.values[number])
+                        Text(word.value)
                             .foregroundColor(Color.white)
                             .fontWeight(.bold)
                         Spacer()
-                        Text(words.keys[number])
+                        Text(word.key)
                             .foregroundColor(Color.white)
                             .fontWeight(.bold)
                     }
@@ -68,11 +60,14 @@ struct ListOfWordsView: View {
        
     
     func delete(at offsets: IndexSet) {
-        words.values.remove(atOffsets: offsets)
-        words.keys.remove(atOffsets: offsets)
+//        words.values.remove(atOffsets: offsets)
+//        words.keys.remove(atOffsets: offsets)
+        words.guys.remove(atOffsets: offsets)
         
-        words.saveWordsRu()
-        words.saveWordsEn()
+        words.saveWords()
+        
+//        words.saveWordsRu()
+//        words.saveWordsEn()
     }
 }
 
