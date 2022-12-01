@@ -22,18 +22,18 @@ struct AddWordSheet: View {
     }
     
     var body: some View {
+        
         ZStack{
-//            Rectangle()
-//                .edgesIgnoringSafeArea(.bottom)
-//                .foregroundColor(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
+            Rectangle()
+                .edgesIgnoringSafeArea(.bottom)
+                .foregroundColor(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
             
             VStack{
                 Text("ADD WORD TO LEARN")
                     .font(.system(size: 41, weight: .heavy, design: .monospaced))
-                    .foregroundColor(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
-                    .padding(30)
+                    .foregroundColor(Color(.white))
+                    .padding()
                     .rotation3DEffect(.degrees(35), axis: (x:4 , y:0, z:0))
-                Spacer()
                 
                 VStack{
                     Form {
@@ -46,15 +46,11 @@ struct AddWordSheet: View {
                     }
                 }
                 
-                .onAppear(perform: {
-                    UITableView.appearance().backgroundColor = UIColor.clear
-                    UITableViewCell.appearance().backgroundColor = UIColor.clear
-                })
+                .scrollContentBackground(.hidden)
+                
+    
                 .background(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
-                .padding(1)
-                .listRowBackground(Color.clear)
-                .accentColor(.blue)
-                .foregroundColor(Color.blue)
+
                 
                 
                 Button(action: {
@@ -66,7 +62,7 @@ struct AddWordSheet: View {
                     
                     alertAddedWord = true
                     makeEmpty()
-                    //                    words.showingSheet = false
+
                 }, label: {
                     ZStack {
                         Rectangle()

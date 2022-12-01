@@ -62,6 +62,7 @@ struct ListOfWordsView: View {
                 .listRowBackground(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)).ignoresSafeArea(.all, edges: .all))
             }
             .listStyle(PlainListStyle())
+            .scrollContentBackground(.hidden)
         }
         .background(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
     }

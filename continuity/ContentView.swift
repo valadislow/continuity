@@ -56,7 +56,6 @@ struct ContentView: View {
                                 }
                         })
                     }
-//                    Spacer()
                     Views.RoundsView(name: "Round: \(rounds)")
                     
                     Text("Choose the correct answer:")
