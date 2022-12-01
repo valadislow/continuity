@@ -110,15 +110,13 @@ class Words : ObservableObject {
     //   ]
     
     
-    //    func saveWordsRu() {
-    //        userDefaults.wordsRu = keys
-    //    }
-    //
-    //    func saveWordsEn() {
-    //        userDefaults.wordsEn = values
-    //    }
+        func saveWordsRu() {
+            userDefaults.wordsKey = guys
+        }
     
-//    func saveWords() {
-//        userDefaults.words = guys
-//    }
+        func saveWordsEn() {
+            userDefaults.wordsValue = guys.value
+        }
+    
+  
 }

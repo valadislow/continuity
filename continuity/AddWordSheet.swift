@@ -61,10 +61,10 @@ struct AddWordSheet: View {
                 Button(action: {
 //                    words.keys.append(addKey)
 //                    words.values.append(addValue)
-                    
+                    addWord()
                     
                
-//                    words.saveWords()
+                    words.saveWords
 //                    words.saveWordsRu()
 //                    words.saveWordsEn()
                     
@@ -103,8 +103,8 @@ struct AddWordSheet: View {
 //        }
 //    }
     
-    func addWord(word: Word){
-        guys.append(word)
+    func addWord(){
+        Words.Word(key: addKey, value: addValue)
     }
     
     func makeEmpty(){

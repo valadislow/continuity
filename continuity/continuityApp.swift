@@ -29,11 +29,14 @@ class AppDelegate: NSObject, UIApplicationDelegate {
     }
     
     func getUserDefialts() {
-            if userDefaults.wordsRu.count > 4 {
-                words.keys = userDefaults.wordsRu
-            }
-            if userDefaults.wordsEn.count > 4 {
-                words.values = userDefaults.wordsEn
-            }
+//        if userDefaults.words.count > 4 {
+//            words = userDefaults.words
+//        }
+//            if userDefaults.words.count > 4 {
+//                words.keys = userDefaults.wordsRu
+//            }
+//            if userDefaults.words.count > 4 {
+//                words.values = userDefaults.wordsEn
+//            }
       }
 }

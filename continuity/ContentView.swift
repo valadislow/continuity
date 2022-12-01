@@ -63,6 +63,7 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         .fontWeight(.heavy)
                     
+//                    Text(words.keys[rounds])
                     Text(words.keys[rounds])
                         .foregroundColor(.white)
                         .fontWeight(.heavy)
@@ -103,7 +104,7 @@ struct ContentView: View {
     }
     
     func randomni() -> Int {
-        let correct = Int.random(in: 0..<words.values.count)
+        let correct = Int.random(in: 0..<words.guys.count)
         return correct
     }
     
