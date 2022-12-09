@@ -22,20 +22,10 @@ class Words : ObservableObject {
     
     
     @Published var keys = [
-        "сочувствие",
-        "учтивость",
-        "неприличный",
         "сверхъестественный",
         "статуэтки",
         "зверский",
         "противоречивый",
-        "делать вид",
-        "целостный",
-        "подробный",
-        "обратный",
-        "отдельный",
-        "придирчивый",
-        "подовался",
         "поучительная история",
         "предостерегающий",
         "столкновения сзади",
@@ -60,20 +50,10 @@ class Words : ObservableObject {
     ]
     
    @Published var values = [
-       "empathy",
-       "courtesy",
-       "inappropriate",
        "uncanny",
        "hummel figures",
        "atrocious",
        "contridactory",
-       "pretend",
-       "holistic",
-       "verbose",
-       "inverse",
-       "separate",
-       "cautious",
-       "succumb",
        "cautionary tale",
        "cautionary",
        "rear end collisions",

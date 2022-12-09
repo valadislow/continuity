@@ -12,6 +12,14 @@ import Combine
 
 struct ContentView: View {
     
+    
+//    var body: some View {
+//        HStack(spacing: 1) {
+//            Text("💩 Answer was wrong 💩 the right one was")
+//            Text("\(words.values[rounds - 1])").bold()
+//        }
+//    }
+    
     @ObservedObject var words = Words.shared
     
     @State private var ListOfWords = false
@@ -61,12 +69,18 @@ struct ContentView: View {
                     Text("Choose the correct answer:")
                         .foregroundColor(.white)
                         .fontWeight(.heavy)
-                    
-                    Text(words.keys[rounds])
-                        .foregroundColor(.white)
-                        .fontWeight(.heavy)
-                        .font(.largeTitle)
+                    HStack {
+                        
+                        Text(words.keys[rounds])
+                            .foregroundColor(.white)
+                            .fontWeight(.heavy)
+                            .font(.largeTitle)
+                    }
                 }
+                
+                
+                
+                
                 
                 ForEach(0..<4, id: \.self) { number in
                     Button(action: {
@@ -91,7 +105,7 @@ struct ContentView: View {
 
             }
             .alert(isPresented: $showingAlert) {
-                Alert(title: Text("💩 Answer was wrong 💩 the right one was \(words.values[rounds - 1])"),            
+                Alert(title: Text("💩 Answer was wrong 💩 the right one was \(words.values[rounds - 1])"),
                       dismissButton: .default(Text("Countinue")))
             }
         }
@@ -149,47 +163,6 @@ struct ContentView: View {
             self.showingAlert = true
         }
     }
-    
-    //    func get(count: String) -> String{
-    //        if count ==
-    //    }
-    
-    //    func rrandom() -> Int {
-    //        if Array(questionsAnswer.values)[rounds] == uwords[random()]{
-    //            return uwords[random()]
-    //        } else {
-    //            return uwords[random()]
-    //        }
-    //
-    //    }
-    //
-    //    func notAlike(count: Int, uwords[random()]: Int) -> Int{
-    //        if count == uwords[random()]{
-    //            return uwords[random()]
-    //        }else{
-    //            return uwords[random()]
-    //        }
-    //    }
-    
-    //    func notAlike(getAnswer(count: number)) -> String {
-    //        if Array(self.questionsAnswer.value)[random()] == Array(self.questionsAnswer.values)[rounds]{
-    //        return uwords[random()]
-    //    } else {
-    //        return Array(self.questionsAnswer.value)[random()]
-    //    }
-    //    }
-    //
-    
-    //        func wordTapped(_ number: Int)  {
-    //             if number == random() {
-    //        score += 1
-    //        } else {
-    //        score -= 1
-    //        }
-    //    }
-    
-    //
-    
 }
 
 
