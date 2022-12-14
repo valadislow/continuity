@@ -72,12 +72,15 @@ struct ContentView: View {
                     HStack {
                         
                         Text(words.keys[rounds])
+                            .padding(10)
                             .foregroundColor(.white)
                             .fontWeight(.heavy)
                             .font(.largeTitle)
+                            .scaledToFit()
+                                .minimumScaleFactor(0.01)
+                                .lineLimit(1)
                     }
                 }
-                
                 
                 
                 
@@ -105,7 +108,10 @@ struct ContentView: View {
 
             }
             .alert(isPresented: $showingAlert) {
-                Alert(title: Text("💩 Answer was wrong 💩 the right one was \(words.values[rounds - 1])"),
+                Alert(title:
+                        Text("💩 Answer was wrong 💩"),
+                      message: Text("the right one was ")
+                      + Text("\(words.values[rounds - 1])"),
                       dismissButton: .default(Text("Countinue")))
             }
         }
