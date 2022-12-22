@@ -47,7 +47,7 @@ struct ListOfWordsView: View {
 //                ForEach(0..<words.values.count, id: \.self) { index in
 //                    ForEach(words.values[index]) { word in
                 
-                ForEach(0..<(words.values.count)) { number in
+                ForEach(0..<(words.values.count), id: \.self) { number in
                     HStack{
                         Text(words.values[number])
                             .foregroundColor(Color.white)

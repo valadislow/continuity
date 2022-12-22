@@ -46,12 +46,12 @@ class Views {
         
         var body: some View {
             Text(name)
-            .foregroundColor(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
-            .fontWeight(.black)
-            .font(.largeTitle)
-            .rotation3DEffect(.degrees(35), axis: (x:3, y:0, z:0))
-            .scaleEffect(2)
-            .padding(25)
+                .padding()
+                .foregroundColor(Color(UIColor(red: 0.64, green: 0.61, blue: 1.00, alpha: 1.00)))
+                .fontWeight(.black)
+                .font(.largeTitle)
+                .rotation3DEffect(.degrees(35), axis: (x:3, y:0, z:0))
+                .scaleEffect(2)
         }
     }
     

@@ -64,6 +64,7 @@ struct ContentView: View {
                                 }
                         })
                     }
+                    
                     Views.RoundsView(name: "Round: \(rounds)")
                     
                     Text("Choose the correct answer:")
@@ -83,16 +84,15 @@ struct ContentView: View {
                 }
                 
                 
-                
-                
-                ForEach(0..<4, id: \.self) { number in
+                ForEach((0..<4), id: \.self) { numberOfWord in
                     Button(action: {
-                        self.examination(number)
+                        self.examination(numberOfWord)
                         self.didSetRounds()
                         self.randoms = random()
+                
                         
                     }){
-                        let text = self.getAnswer(count: number)
+                        let text = self.getAnswer(count: numberOfWord)
                         Text(text)
                             .fontWeight(.semibold)
                             .frame(width: 200, height: 100)
@@ -121,6 +121,7 @@ struct ContentView: View {
         return correct
     }
     
+    
     func randomni() -> Int {
         let correct = Int.random(in: 0..<words.values.count)
         return correct
@@ -133,6 +134,15 @@ struct ContentView: View {
         return newElement
     }
     
+    func checkButton(count: Int) -> String {
+        if count == self.randoms {
+            let element = elementControl()
+            return element
+        } else {
+            let element = elementControl()
+            return element
+        }
+    }
     
     func getAnswer(count: Int) -> String {
         if count == self.randoms {
