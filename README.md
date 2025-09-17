@@ -16,16 +16,16 @@ ___
 ## Add Your Words
 **Easily add new words you want to learn to your personal vocabulary list.**
 
-<img src="https://github.com/user-attachments/assets/277dcf81-1ea4-4f4a-906f-ae3437accc22" width="300" />
 <img src="https://github.com/user-attachments/assets/2b348900-3bd6-4a88-a989-b2bc2b32008e" width="300" />
+<img src="https://github.com/user-attachments/assets/0323db2c-28c5-4cd0-9775-e0725981d13b" width="300" />
 
 ___
 
 ## Word List Management
 **Browse through your entire word list, track your progress, and delete words you’ve already mastered.**
-<img src="https://user-images.githubusercontent.com/102054137/171948171-5461496e-83f5-45c9-a306-0ce5ffc45201.jpg" width="300"/> 
-<img src="https://user-images.githubusercontent.com/102054137/171948216-61ed7bc2-a319-4cb4-ab9a-8ae7d767f5e8.jpg" width="300"/>
 
+<img src="https://github.com/user-attachments/assets/ff2894d2-7db6-4f98-99b3-91f4923ca57f" width="300" />
+<img src="https://github.com/user-attachments/assets/613b6660-63d9-4441-a49b-2a5394f9007b" width="300" />
 
 ## Tech Stack
 
