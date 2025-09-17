@@ -10,6 +10,7 @@ ___
 ## All exercises are presented in a game-like format to make learning more engaging and enjoyable.
 <img src="https://github.com/user-attachments/assets/eaffa077-9fa0-41e0-ba87-ec18c50ddb88" width="300" />
 <img src="https://github.com/user-attachments/assets/ecac8e56-38d6-40d4-b115-1b22dbafb4fa" width="300" />
+
 ___
 
 ## Add Your Words
