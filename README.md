@@ -8,13 +8,12 @@
 The core feature of this app is that you choose the words you want to study and add them yourself. The entire learning experience is based on repetition. You can review your word list at any time, and once you’ve mastered a word, you can simply remove it and continue practicing the rest.
 ___
 ## All exercises are presented in a game-like format to make learning more engaging and enjoyable.
-<img src="https://github.com/user-attachments/assets/eaffa077-9fa0-41e0-ba87-ec18c50ddb88" width="300" height="500" /> 
-<img src="https://github.com/user-attachments/assets/ecac8e56-38d6-40d4-b115-1b22dbafb4fa" width="300" height="500" />
+<img src="https://github.com/user-attachments/assets/eaffa077-9fa0-41e0-ba87-ec18c50ddb88" width="300" height="600" /> 
+<img src="https://github.com/user-attachments/assets/ecac8e56-38d6-40d4-b115-1b22dbafb4fa" width="300" height="600" />
 
 ___
 ## Add Your Words
 **Easily add new words you want to learn to your personal vocabulary list.**
-
 <img src="https://github.com/user-attachments/assets/277dcf81-1ea4-4f4a-906f-ae3437accc22" width="300" />
 <img src="https://github.com/user-attachments/assets/2b348900-3bd6-4a88-a989-b2bc2b32008e" width="300" />
 ___
