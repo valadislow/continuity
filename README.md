@@ -13,6 +13,7 @@ ___
 ___
 ## Add Your Words
 **Easily add new words you want to learn to your personal vocabulary list.**
+
 <img src="https://user-images.githubusercontent.com/102054137/171947726-5ed79340-7cc8-40f1-9047-9766c07b9fba.jpg" width="300" />  <img src="https://user-images.githubusercontent.com/102054137/171947761-022fb529-88d3-4332-a11b-30e28bdbb330.jpg" width="300" />
 ___
 ## Word List Management
