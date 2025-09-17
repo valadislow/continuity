@@ -15,6 +15,7 @@ ___
 
 ## Add Your Words
 **Easily add new words you want to learn to your personal vocabulary list.**
+
 <img src="https://github.com/user-attachments/assets/277dcf81-1ea4-4f4a-906f-ae3437accc22" width="300" />
 <img src="https://github.com/user-attachments/assets/2b348900-3bd6-4a88-a989-b2bc2b32008e" width="300" />
 
